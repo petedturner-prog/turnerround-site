@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Turnerround | Property investment &amp; renovation, South Yorkshire</title>
-<meta name="description" content="Turnerround: restoring ruined houses in South Yorkshire. Renovation stories, mentoring and JV partnerships.">
+<meta name="description" content="Turnerround: restoring ruined houses in South Yorkshire. Renovation, deal finding, mentoring and JV partnerships.">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <style>
@@ -24,6 +24,9 @@ section{padding:3rem 0}h2{font-family:Georgia,serif;font-size:1.8rem;margin-bott
 .tag{display:inline-block;background:var(--ember);color:#fff;font-size:.7rem;font-weight:700;padding:.15rem .5rem;border-radius:4px;margin-bottom:.4rem}
 .btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;margin:.3rem .3rem 0 0}
 .btn.e{background:var(--ember);color:#fff}.btn.w{background:#25d366;color:#08311a}.btn.t{background:var(--ash);color:var(--cream)}
+.btn.blue,.btn.red{color:#fff;transition:background-color .15s ease}
+.btn.blue{background:var(--ash)}.btn.blue:hover,.btn.blue:focus-visible{background:#3e5688;color:#fff}
+.btn.red{background:#b42318}.btn.red:hover,.btn.red:focus-visible{background:#8e1a14;color:#fff}
 .steps{counter-reset:s;list-style:none;padding:0}.steps li{counter-increment:s;padding:.6rem 0 .6rem 2.8rem;position:relative}
 .steps li::before{content:counter(s);position:absolute;left:0;top:.5rem;width:2rem;height:2rem;border-radius:50%;background:var(--ember);color:#fff;text-align:center;line-height:2rem;font-weight:700}
 footer{background:var(--ash);color:var(--cream2);padding:2rem 0;font-size:.85rem;text-align:center}footer p{margin:.3rem 0}
@@ -36,6 +39,21 @@ footer{background:var(--ash);color:var(--cream2);padding:2rem 0;font-size:.85rem
 .logo-badge.sm img{width:110px}
 .offers{display:grid;gap:1rem}@media(min-width:700px){.offers{grid-template-columns:1fr 1fr}}
 .offer{background:#fff;border-radius:14px;padding:1.1rem 1.1rem 1.2rem;box-shadow:0 4px 14px rgba(0,0,0,.08);border-top:4px solid var(--ember)}.offer h3{margin-bottom:.3rem}
+.offer.span{grid-column:1/-1}.prices{display:grid;gap:.7rem;margin:.85rem 0 .15rem}@media(min-width:700px){.prices{grid-template-columns:1fr 1fr}}
+.price{background:var(--cream);border-radius:10px;padding:.9rem 1rem}.price .amount{font-family:Georgia,serif;font-size:1.7rem;font-weight:700;line-height:1.1;color:var(--ember);display:block}.price .per{font-size:.95rem}.price strong{display:block;margin-top:.25rem}.price p{font-size:.9rem;margin-top:.15rem}
+.usps{list-style:none;padding:0;margin:.9rem 0 0;display:grid;gap:.45rem 1rem}@media(min-width:700px){.usps{grid-template-columns:1fr 1fr}}
+.usps li{position:relative;padding-left:1.05rem;font-size:.92rem}.usps li::before{content:"";position:absolute;left:0;top:.55rem;width:.42rem;height:.42rem;border-radius:50%;background:var(--ember)}
+.deal-row{display:flex;flex-direction:column;gap:1rem;margin-top:1rem}.sample{order:-1}
+@media(min-width:700px){.deal-row{display:grid;grid-template-columns:1fr 1fr;align-items:start}.sample{order:0}.deal-buy .prices{grid-template-columns:1fr}}
+.sample{background:var(--ash);color:var(--cream);border-radius:18px;padding:.7rem .7rem .8rem}
+.sample-label{margin:0 0 .45rem;text-align:center;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ember2)}
+.phone{background:#fff;color:var(--ash);border-radius:12px;padding:.75rem .8rem .65rem}
+.phone .ptitle{font-family:Georgia,serif;font-size:1.05rem;line-height:1.25;margin:0}.phone .ptype{margin:.1rem 0 0;font-size:.8rem;color:var(--ash2)}
+.phone dl{margin:.4rem 0 0}.phone dl div{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;padding:.3rem 0;border-top:1px solid var(--cream2);font-size:.8rem;line-height:1.3}
+.phone dt{color:var(--ash2)}.phone dd{margin:0;font-weight:700;text-align:right}.phone dd span{display:block;font-weight:600;font-size:.72rem;color:var(--ash2)}
+.phone .flag{margin:.45rem 0 0;font-size:.78rem;color:var(--ash2)}.phone .linkline{margin:.15rem 0 0;font-size:.78rem;font-weight:700;color:var(--ember)}
+.pill{display:inline-block;background:var(--ash);color:#fff;font-style:normal;font-size:.68rem;font-weight:700;letter-spacing:.02em;padding:.08rem .42rem;border-radius:999px}
+.sample-note{margin:.45rem 0 0;text-align:center;font-size:.72rem;color:var(--cream2)}
 .scripture{background:var(--ash);color:var(--cream);border-radius:14px;padding:1.4rem;margin-top:1.4rem;text-align:center}
 .nav a{margin-left:.7rem}
 .strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:minmax(0,1fr);overflow:hidden;gap:2px;background:var(--ember);padding-bottom:2px;height:130px}.strip img{width:100%;height:100%;object-fit:cover;display:block;min-width:0}@media(min-width:700px){.strip{height:220px;gap:3px;padding-bottom:3px}}
@@ -56,10 +74,11 @@ footer{background:var(--ash);color:var(--cream2);padding:2rem 0;font-size:.85rem
 <span class="strap">Beauty for ashes</span>
 </section>
 <section id="offer"><div class="wrap"><h2>What we offer</h2><div class="offers">
-<div class="offer"><h3>JV partnerships</h3><p>Want to invest in property without doing the hands-on work? We partner with investors on joint-venture projects, with clear terms and honest updates from start to finish.</p><a class="btn e" href="mailto:Peter.turner@turnerround.uk?subject=JV%20partnership%20enquiry">Talk about a JV</a></div>
+<div class="offer"><h3>JV partnerships</h3><p>Want to invest in property without doing the hands-on work? We partner with investors on joint-venture projects, with clear terms and honest updates from start to finish.</p><a class="btn red" href="mailto:Peter.turner@turnerround.uk?subject=JV%20partnership%20enquiry">Talk about a JV</a></div>
 <div class="offer"><h3>Renovations</h3><p>We take tired, neglected and forgotten properties and turn them round into safe, warm, good-quality homes.</p><a class="btn t" href="#before-after">See the work</a></div>
 <div class="offer"><h3>Mentoring</h3><p>Starting out in property? I'll share what I've learned, mistakes and all: finding deals, managing builders, refurb budgets and doing it with integrity.</p><a class="btn e" href="mailto:Peter.turner@turnerround.uk?subject=Mentoring%20enquiry">Ask about mentoring</a></div>
 <div class="offer"><h3>Investor community</h3><p>Follow the renovations on TikTok and join the Turnerround Investments WhatsApp group.</p><a class="btn w" href="https://chat.whatsapp.com/LIhRfJvyXiQB11U30ed2JP" target="_blank" rel="noopener">Join WhatsApp group</a></div>
+<div class="offer span"><h3>Property deal finding</h3><p>Want the deals found for you? I run bespoke renovation and buy, refurbish, refinance searches, and send you the ones worth a look.</p><ul class="usps"><li><b>Same-road solds only.</b> Land Registry prices on that street, not a guess from the next one.</li><li><b>Built to pull your money out.</b> The 75% refinance is worked out up front: cash in against cash released.</li><li><b>Your patch.</b> Set to your area, how far you'll drive, and your budget.</li><li><b>Live listings only.</b> Nothing SSTC, and no traditional auctions.</li><li><b>Ready to act.</b> A direct link, plus honest flags: cash-only, modern auction fees, and the refurb.</li></ul><div class="deal-row"><div class="deal-buy"><div class="prices"><div class="price"><span class="amount">£20</span><strong>One-off search</strong><p>A single search, delivered to you.</p></div><div class="price"><span class="amount">£50<span class="per">/month</span></span><strong>Weekly search</strong><p>A fresh search delivered every week.</p></div></div><a class="btn blue" href="mailto:Peter.turner@turnerround.uk?subject=Deal%20finding%20enquiry">Enquire about a search</a></div><aside class="sample"><p class="sample-label">Example deal output</p><div class="phone"><p class="ptitle">8 Beech Street, Rotherham</p><p class="ptype">3-bed terrace</p><dl><div><dt>Asking price</dt><dd>£72,000</dd></div><div><dt>Same-road sold</dt><dd>£148,000<span>No. 22 · Feb 2026</span></dd></div><div><dt>Refurb estimate</dt><dd>£30,000</dd></div><div><dt>Money in</dt><dd>£108,500</dd></div><div><dt>75% refinance</dt><dd>£111,000</dd></div><div><dt>Cash released</dt><dd>£2,500</dd></div><div><dt>Left in</dt><dd>£0 <em class="pill">0% left in</em></dd></div><div><dt>Drive time</dt><dd>24 min</dd></div></dl><p class="flag">Modern auction. Fee included in money in.</p><p class="linkline">Listing link included</p></div><p class="sample-note">Illustrative figures, not a live listing.</p></aside></div></div>
 </div></div></section>
 <section id="before-after"><div class="wrap"><h2>Before &amp; after</h2>
 <p style="margin-bottom:1rem">Stills from the renovation videos.</p>
@@ -77,7 +96,7 @@ footer{background:var(--ash);color:var(--cream2);padding:2rem 0;font-size:.85rem
 <p style="margin-top:.8rem">If you're new to property, or looking to invest alongside someone who does it properly and honestly, you're very welcome.</p>
 <div class="scripture"><p class="verse">"…to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness… And they shall build the old wastes, they shall raise up the former desolations, and they shall repair the waste cities."</p><p class="ref">Isaiah 61:3–4 (KJV)</p></div></div></section>
 <section id="follow" class="alt"><div class="wrap"><h2>Follow the journey</h2>
-<ol class="steps"><li><b>Watch</b> the renovations on TikTok at @restoringruins</li><li><b>Join</b> the Turnerround Investments WhatsApp group</li><li><b>Work with us</b> through mentoring or a JV partnership</li></ol>
+<ol class="steps"><li><b>Watch</b> the renovations on TikTok at @restoringruins</li><li><b>Join</b> the Turnerround Investments WhatsApp group</li><li><b>Work with us</b> through deal finding, mentoring or a JV partnership</li></ol>
 <div class="ttgrid"><a class="tt" href="https://www.tiktok.com/@restoringruins/video/7697686761236925718" target="_blank" rel="noopener"><img src="img/gallery/tt-7697686761236925718.jpg" alt="" loading="lazy"><span>▶ Sheffield apartment: broken state to restored</span></a><a class="tt" href="https://www.tiktok.com/@restoringruins/video/7680427005292186902" target="_blank" rel="noopener"><img src="img/gallery/tt-7680427005292186902.jpg" alt="" loading="lazy"><span>▶ Renovation complete: downstairs</span></a><a class="tt" href="https://www.tiktok.com/@restoringruins/video/7680300066338278678" target="_blank" rel="noopener"><img src="img/gallery/tt-7680300066338278678.jpg" alt="" loading="lazy"><span>▶ Completed renovation on our £55k house</span></a><a class="tt" href="https://www.tiktok.com/@restoringruins/video/7675671522433862934" target="_blank" rel="noopener"><img src="img/gallery/tt-7675671522433862934.jpg" alt="" loading="lazy"><span>▶ Carpets in at the refurb house</span></a></div><p class="small">More: <a href="https://www.tiktok.com/@restoringruins/video/7692518369119030550" target="_blank" rel="noopener">Sheffield apartment update</a> · <a href="https://www.tiktok.com/@restoringruins/video/7686686514251648278" target="_blank" rel="noopener">£55k purchase to £80k valuation</a></p><a class="btn t" href="https://www.tiktok.com/@restoringruins" target="_blank" rel="noopener">Follow @restoringruins on TikTok</a>
 <a class="btn w" href="https://chat.whatsapp.com/LIhRfJvyXiQB11U30ed2JP" target="_blank" rel="noopener">Join our WhatsApp group</a></div></section>
 <section id="contact"><div class="wrap"><h2>Contact</h2><p>Fancy a chat? Drop me a line.</p><a class="btn e" href="mailto:Peter.turner@turnerround.uk">Peter.turner@turnerround.uk</a></div></section>
