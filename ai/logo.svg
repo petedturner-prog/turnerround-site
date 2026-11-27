@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 28 192 168" fill="none">
+  <title>Turnerround AI</title>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 12 12" refX="0.4" refY="6" markerWidth="1.45" markerHeight="1.45" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 1.15 L11.2 6 L0 10.85 Z" fill="#2b7fff"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 12 12" refX="0.4" refY="6" markerWidth="1.45" markerHeight="1.45" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 1.15 L11.2 6 L0 10.85 Z" fill="#2ec4b6"/>
+    </marker>
+    <radialGradient id="shell" cx="35%" cy="28%" r="80%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="68%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e7eef6"/>
+    </radialGradient>
+    <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3968"/>
+      <stop offset="100%" stop-color="#07152c"/>
+    </linearGradient>
+    <filter id="shadow" x="-35%" y="-35%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="5" stdDeviation="2.6" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <path d="M 25.66 123.80 A 76 76 0 0 1 156.48 57.15" stroke="#2b7fff" stroke-width="13" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+  <path d="M 175.26 97.42 A 76 76 0 0 1 49.15 164.48" stroke="#2ec4b6" stroke-width="13" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+  <g filter="url(#shadow)">
+    <circle cx="54" cy="114" r="14" fill="#fff"/>
+    <circle cx="146" cy="114" r="14" fill="#fff"/>
+    <circle cx="54" cy="114" r="8.2" stroke="#2b7fff" stroke-width="3.3"/>
+    <circle cx="146" cy="114" r="8.2" stroke="#4eb4f2" stroke-width="3.3"/>
+    <ellipse cx="100" cy="114" rx="52" ry="43" fill="url(#shell)"/>
+  </g>
+  <rect x="64" y="90" width="72" height="50" rx="25" fill="url(#visor)"/>
+  <path d="M80 98 q7 -4 14 2" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" opacity="0.92"/>
+  <path d="M78 112 q9 -11 18 0" stroke="#3ad7f5" stroke-width="4.3" stroke-linecap="round"/>
+  <path d="M106 112 q9 -11 18 0" stroke="#3ad7f5" stroke-width="4.3" stroke-linecap="round"/>
+  <path d="M88 126 q12 11 24 0" stroke="#3ad7f5" stroke-width="4.3" stroke-linecap="round"/>
+</svg>
